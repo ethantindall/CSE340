@@ -1,0 +1,62 @@
+nav {
+    background-color: #3a3a3a;
+    height: 2.8em;
+
+}
+nav ul li {
+    margin-top: 12px;
+    display: inline-block
+}
+nav ul li a {
+    margin: 5px 3px 5px 3px;
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    background-color: #4c96d7;
+    padding: 17px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin-left: -30px;
+    
+}
+body {
+    margin: 10px auto 10px auto;
+    width: 90%;
+    border: #4c96d7 5px solid;
+    background-color: white;
+    border-radius: 10px;
+    background-image: url("../images/site/checkerboard.jpg");
+    background-size: 300px 300px;
+    font-family: 'Electrolize', sans-serif;
+}
+header, main, footer {
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin: 0 0 -8px 0;
+}
+footer {
+    text-align: center;
+}
+footer p {
+    margin: 0;
+    font-size: .7rem;
+}
+#bottom {
+    padding-bottom: 10px;
+}
+#acctLink {
+    float: right;
+    padding-top: 30px;
+    padding-right: 35px;
+}
+hr {
+    background-color: gray;
+    height: 5px;
+}
