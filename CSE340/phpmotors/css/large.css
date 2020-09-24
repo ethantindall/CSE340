@@ -1,8 +1,13 @@
-@media only screen and (min-width: 700px) {
-    h1 {
+@media screen and (min-width: 700px) {
+
+    body {
+        width: 600px;
+    }
+h1 {
     text-align: left;
     padding: 10px 0 10px 10px;
     margin: 0 0 -8px 0;
+    color: red;
 }
 
 nav ul {

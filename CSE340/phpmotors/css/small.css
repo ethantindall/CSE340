@@ -1,28 +1,4 @@
-nav {
-    background-color: #3a3a3a;
-    height: 2.8em;
 
-}
-nav ul li {
-    margin-top: 12px;
-    display: inline-block
-}
-nav ul li a {
-    margin: 5px 3px 5px 3px;
-    text-decoration: none;
-    color: white;
-}
-nav ul li a:hover {
-    background-color: #4c96d7;
-    padding: 17px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-    margin-left: -30px;
-    
-}
 body {
     margin: 10px auto 10px auto;
     width: 90%;
@@ -59,4 +35,32 @@ footer p {
 hr {
     background-color: gray;
     height: 5px;
+}
+
+/*---------NAV-------------*/
+
+nav {
+    background-color: #3a3a3a;
+    height: 2.8em;
+
+}
+nav ul li {
+    margin-top: 12px;
+    display: inline-block
+}
+nav ul li a {
+    margin: 5px 3px 5px 3px;
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    background-color: #4c96d7;
+    padding: 17px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin-left: -30px;
+    
 }
