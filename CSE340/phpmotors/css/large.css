@@ -1,24 +1,16 @@
-@media screen and (min-width: 700px) {
-
-    body {
-        width: 600px;
-    }
+@media (min-width: 600px) {
 h1 {
     text-align: left;
     padding: 10px 0 10px 10px;
     margin: 0 0 -8px 0;
-    color: red;
 }
 
 nav ul {
-    list-style-type: none;
     text-align: left;
-    margin-left: -30px;
 }
 
 nav ul li a {
-    margin: 5px 5px 5px 5px;
-    text-decoration: none;
-    color: white;
+    margin: 0px 5px;
+
 }
 }

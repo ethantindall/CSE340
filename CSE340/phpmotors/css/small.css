@@ -1,7 +1,7 @@
 
 body {
     margin: 10px auto 10px auto;
-    width: 90%;
+    max-width: 750px;
     border: #4c96d7 5px solid;
     background-color: white;
     border-radius: 10px;
@@ -12,6 +12,7 @@ body {
 header, main, footer {
     background-color: white;
 }
+
 h1 {
     text-align: center;
     padding: 10px 0 10px 0;
@@ -40,16 +41,16 @@ hr {
 /*---------NAV-------------*/
 
 nav {
+    margin-top: -18px;
     background-color: #3a3a3a;
     height: 2.8em;
-
 }
 nav ul li {
-    margin-top: 12px;
+    margin-top: 13px;
     display: inline-block
 }
 nav ul li a {
-    margin: 5px 3px 5px 3px;
+    margin: 3px;
     text-decoration: none;
     color: white;
 }
