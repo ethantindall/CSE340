@@ -6,11 +6,12 @@
     <link rel="stylesheet" media="screen" href="css/small.css">
     <link rel="stylesheet" media="screen" href="css/large.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>PHP Motors Homepage</title>
 
 </head>
 <body>
+    <div id="wrapper"> 
     <header>
         <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/header.php'; ?>
     </header>
@@ -25,7 +26,7 @@
     <footer>
         <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/footer.php'; ?>
     </footer>
-
+    </div>
 <script src="js/main.js"></script>
 </body>
 </html>

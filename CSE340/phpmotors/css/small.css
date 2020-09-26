@@ -1,16 +1,14 @@
-
+#wrapper {
+    background-color: white;
+    border: #4c96d7 5px solid;
+    border-radius: 10px;
+}
 body {
     margin: 10px auto 10px auto;
     max-width: 750px;
-    border: #4c96d7 5px solid;
-    background-color: white;
-    border-radius: 10px;
     background-image: url("../images/site/checkerboard.jpg");
+    font-family: 'Share Tech Mono', monospace;
     background-size: 300px 300px;
-    font-family: 'Electrolize', sans-serif;
-}
-header, main, footer {
-    background-color: white;
 }
 
 h1 {
