@@ -6,9 +6,10 @@ body {
     max-width: 750px;
     background-image: url("../images/site/checkerboard.jpg");
     font-family: 'Share Tech Mono', monospace;
-    background-size: 300px 300px;
-    display: block;
-    
+    background-size: 300px 300px; 
+}
+#logo {
+    width: 40%;
 }
 body img {
     max-width: 100%;
@@ -33,7 +34,7 @@ footer p {
 }
 #acctLink {
     float: right;
-    padding-top: 30px;
+    padding-top: 4%;
     padding-right: 35px;
 }
 hr {

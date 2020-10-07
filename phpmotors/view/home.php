@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="css/small.css">
     <link rel="stylesheet" media="screen" href="css/large.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
     <title>PHP Motors Homepage</title>
 
 </head>
 <body>
     <div id="wrapper"> 
     <header>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/header.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/header.php'; ?>
     </header>
 
     <nav>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/nav.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/nav.php'; ?>
     </nav>
 
     <main>
@@ -34,7 +34,6 @@
             
             </div>
         </header>
-        <body>
         <div id="base">
         <div id="col1">
                 <h3>DMC Delorean Reviews</h3>
@@ -73,10 +72,9 @@
 
             </div>
         </div>
-        </body>
     </main>
     <footer>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/footer.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/footer.php'; ?>
     </footer>
     </div>
 <script src="js/main.js"></script>

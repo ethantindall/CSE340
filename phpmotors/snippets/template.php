@@ -13,18 +13,18 @@
 <body>
     <div id="wrapper"> 
     <header>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/header.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/header.php'; ?>
     </header>
 
     <nav>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/nav.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/nav.php'; ?>
     </nav>
 
     <main>
         <h1>Content Title Here</h1>
     </main>
     <footer>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/CSE340/phpmotors/snippets/footer.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/footer.php'; ?>
     </footer>
     </div>
 <script src="js/main.js"></script>

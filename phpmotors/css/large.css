@@ -10,7 +10,9 @@ h1 {
     top: 1px;
     left: 30px;
 }
-
+#acctLink {
+    padding-top: 6%;
+}
 #aboutCar p:nth-child(2) {
     top: 40px;
 }
@@ -32,6 +34,7 @@ nav ul li a {
 body {
     margin-top: 10px;
 
+
 }
 #aboutCar button {
     position: absolute;
@@ -50,5 +53,6 @@ body {
 #base {
     display: flex;
     flex-direction: row;
-}
+} 
+
 }

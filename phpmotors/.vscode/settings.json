@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "127.0.0.1",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "phpmotors",
+            "database": "phpmotors",
+            "username": "iClient",
+            "password": "MyObx20x7uekPd1T"
+        }
+    ]
+}
