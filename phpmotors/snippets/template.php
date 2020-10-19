@@ -17,7 +17,7 @@
     </header>
 
     <nav>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/nav.php'; ?>
+        <?php echo $navList; ?>
     </nav>
 
     <main>

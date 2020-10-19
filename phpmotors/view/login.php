@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href="../css/small.css">
-    <link rel="stylesheet" media="screen" href="../css/large.css">
+    <link rel="stylesheet" media="screen" href="/phpmotors/css/small.css">
+    <link rel="stylesheet" media="screen" href="/phpmotors/css/large.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>PHP Motors Login</title>
@@ -21,16 +21,17 @@
     </nav>
 
     <main>
-        <h1>Register</h1>
-        <form>
+        <h1>Log In</h1>
+        <?php if (isset($message)) {echo $message;} ?>        
+        <form action="/phpmotors/accounts/index.php" method="post">
 
-            <label for="email">Email</label><br>
+            <label>Email</label><br>
             <input type="email" name="email"><br>
-            <label for="password">Password</label><br>
+            <label>Password</label><br>
             <input type="password" name="password"><br>
             <button type="submit">Sign In</button>
         </form>
-        <a href="register.php">Not a member yet?</a>
+        <a href="/phpmotors/accounts/index.php/?action=register-page">Not a member yet?</a>
 
     </main>
     <footer>

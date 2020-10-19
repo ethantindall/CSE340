@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href="../css/small.css">
-    <link rel="stylesheet" media="screen" href="../css/large.css">
+    <link rel="stylesheet" media="screen" href="/phpmotors/css/small.css">
+    <link rel="stylesheet" media="screen" href="/phpmotors/css/large.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>PHP Motors Register</title>
@@ -22,16 +22,24 @@
 
     <main>
         <h1>Register</h1>
-        <form>
-            <label for="clientFirstname">First Name</label><br>
+        <p>All fields are required.</p>
+
+
+
+        <?php if (isset($message)) {echo $message;} ?>        
+
+        <form method="post" action="/phpmotors/accounts/index.php">
+            <label>First Name</label><br>
             <input name="clientFirstname" id="clientFirstname" type="text"><br>
-            <label for="lname">Last Name</label><br>
-            <input type="text" name="lname"><br>
-            <label for="email">Email</label><br>
-            <input type="email" name="email"><br>
-            <label for="password">Password</label><br>
-            <input type="password" name="password"><br>
-            <button type="submit">Register</button>
+            <label>Last Name</label><br>
+            <input type="text" name="clientLastname" id="lname"><br>
+            <label>Email</label><br>
+            <input type="email" name="clientEmail" id="email"><br>
+            <label>Password</label><br>
+            <input type="password" name="clientPassword" id="password"><br>
+            <input type="submit" name="submit" id="regbtn" value="Register">
+            <input type="hidden" name="action" value="register">
+
         </form>
 
     </main>
