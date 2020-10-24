@@ -2,9 +2,6 @@
 /*
  * Proxy connection to the phpmotors database 
  * 
- * 
- * NEED HEADER AND REQUIRE???
- * 
  */
 function phpmotorsConnect() {
     $server = 'localhost';
