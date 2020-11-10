@@ -2,7 +2,6 @@
 
 
 function addClassification($classificationName){
-    //$classificationId = ???;
     // Create a connection object from the phpmotors connection function
     $db = phpmotorsConnect(); 
 
@@ -24,7 +23,6 @@ function addClassification($classificationName){
 
 //new vehicle
 function addVehicle($invMake, $invModel, $invDescription, $invImage, $invThumbnail, $invPrice, $invStock, $invColor, $classificationId) {
-    //$invId = ???;
     $db = phpmotorsConnect(); 
     $sql = "INSERT INTO inventory (invMake, invModel, invDescription, invImage, invThumbnail, invPrice, invStock, invColor, classificationId) 
             VALUES (:invMake, :invModel, :invDescription, :invImage, :invThumbnail, :invPrice, :invStock, :invColor, :classificationId)";
@@ -50,3 +48,27 @@ function addVehicle($invMake, $invModel, $invDescription, $invImage, $invThumbna
     // Return the indication of success (rows changed)
     return $rowsChanged;
 }
+
+// Get vehicles by classificationId 
+function getInventoryByClassification($classificationId){ 
+    $db = phpmotorsConnect(); 
+    $sql = ' SELECT * FROM inventory WHERE classificationId = :classificationId'; 
+    $stmt = $db->prepare($sql); 
+    $stmt->bindValue(':classificationId', $classificationId, PDO::PARAM_INT); 
+    $stmt->execute(); 
+    $inventory = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    $stmt->closeCursor(); 
+    return $inventory; 
+   }
+
+// Get vehicle information by invId
+function getInvItemInfo($invId){
+    $db = phpmotorsConnect();
+    $sql = 'SELECT * FROM inventory WHERE invId = :invId';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
+    $stmt->execute();
+    $invInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $invInfo;
+   }

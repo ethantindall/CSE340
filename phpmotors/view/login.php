@@ -17,19 +17,26 @@
     </header>
 
     <nav>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/nav.php'; ?>
+        <?php echo $navList; ?>
     </nav>
 
     <main>
         <h1>Log In</h1>
-        <?php if (isset($message)) {echo $message;} ?>        
-        <form action="/phpmotors/accounts/index.php" method="post">
+        <?php 
+        if (isset($_SESSION['message'])) {
+            echo $_SESSION['message'];
+        }
+         ?> 
 
+        <form action="/phpmotors/accounts/" method="post">
             <label>Email</label><br>
-            <input type="email" name="email"><br>
+            <input required type="email" name="clientEmail" <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?> ><br>
             <label>Password</label><br>
-            <input type="password" name="password"><br>
+            <span>(Must be at least 8 characters and have 1 uppercase letter number and special character.)</span><br>
+            <input required type="password" name="clientPassword" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"><br>
             <button type="submit">Sign In</button>
+            <input type="hidden" name="action" value="Login">
+
         </form>
         <a href="/phpmotors/accounts/index.php/?action=register-page">Not a member yet?</a>
 
@@ -38,6 +45,6 @@
         <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/footer.php'; ?>
     </footer>
     </div>
-<script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

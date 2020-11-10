@@ -14,6 +14,7 @@
     <div id="wrapper"> 
     <header>
         <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/header.php'; ?>
+        <a id="acctLink" href="/phpmotors/accounts/index.php/?action=login-page">My Account</a>
     </header>
 
     <nav>

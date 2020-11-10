@@ -1,7 +1,5 @@
 <?php
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE && $_SESSION['clientData']['clientLevel'] > 1) {
-    $continue = "continue";
-} else {
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === FALSE) {
     header('Location: /phpmotors');
 }
 ?><!DOCTYPE html>
@@ -27,15 +25,16 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE && $_SESSION[
     </nav>
 
     <main>
-        <h1>Add A Classification</h1>  
-        <?php if (isset($message)) {echo $message;} ?>        
+        <h1><?php echo $clientData['clientFirstname']; ?></h1>
+        <ul>
+            <li>First Name: <?php echo $clientData['clientFirstname']; ?></li>
+            <li>Last Name: <?php echo $clientData['clientLastname']; ?></li>
+            <li>Email: <?php echo $clientData['clientEmail']; ?></li>
+        </ul>
+        <?php if ($clientData['clientLevel'] > 1) {echo '<p><a href="/phpmotors/vehicles">Vehicle Management</a></p>';} ?> 
 
-        <form action="phpmotors/vehicles/index.php" method="post">
-            <label>Enter a new classification:</label><br>    
-            <input required type="text" name="classificationName"><br>
-            <input type="submit" name="submit" id="subbtn" value="Submit Classification">
-            <input type="hidden" name="action" value="addclassificationtodb">
-        </form>
+<p>You are logged in.</p>  
+
     </main>
     <footer>
         <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/footer.php'; ?>

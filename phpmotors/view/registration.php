@@ -17,7 +17,7 @@
     </header>
 
     <nav>
-        <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/nav.php'; ?>
+        <?php echo $navList; ?>
     </nav>
 
     <main>
@@ -30,13 +30,14 @@
 
         <form method="post" action="/phpmotors/accounts/index.php">
             <label>First Name</label><br>
-            <input name="clientFirstname" id="clientFirstname" type="text"><br>
+            <input required  type="text" name="clientFirstname" id="clientFirstname" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> ><br>
             <label>Last Name</label><br>
-            <input type="text" name="clientLastname" id="lname"><br>
+            <input required type="text" name="clientLastname" id="lname" <?php if(isset($clientLastname)){echo "value='$clientLastname'";}  ?> ><br>
             <label>Email</label><br>
-            <input type="email" name="clientEmail" id="email"><br>
+            <input required type="email" name="clientEmail" id="email" <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?> ><br>
             <label>Password</label><br>
-            <input type="password" name="clientPassword" id="password"><br>
+            <span>(Must be at least 8 characters and have 1 uppercase letter number and special character.)</span><br>
+            <input required type="password" name="clientPassword" id="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"><br>
             <input type="submit" name="submit" id="regbtn" value="Register">
             <input type="hidden" name="action" value="register">
 
@@ -47,6 +48,6 @@
         <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/footer.php'; ?>
     </footer>
     </div>
-<script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
