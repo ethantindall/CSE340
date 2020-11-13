@@ -7,7 +7,7 @@
     <link rel="stylesheet" media="screen" href="/phpmotors/css/large.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <title>PHP Motors Register</title>
+    <title>PHP Motors Registration</title>
 
 </head>
 <body>
@@ -48,6 +48,6 @@
         <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/footer.php'; ?>
     </footer>
     </div>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

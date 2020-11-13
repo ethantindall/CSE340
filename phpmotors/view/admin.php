@@ -11,7 +11,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === FALSE) {
     <link rel="stylesheet" media="screen" href="/phpmotors/css/large.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <title>PHP Motors Add Classification</title>
+    <title>PHP Motors Admin Page</title>
 
 </head>
 <body>
@@ -26,12 +26,22 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === FALSE) {
 
     <main>
         <h1><?php echo $clientData['clientFirstname']; ?></h1>
+        <?php if (isset($_SESSION['message'])) {
+            echo $_SESSION['message'];} ?> 
         <ul>
             <li>First Name: <?php echo $clientData['clientFirstname']; ?></li>
             <li>Last Name: <?php echo $clientData['clientLastname']; ?></li>
             <li>Email: <?php echo $clientData['clientEmail']; ?></li>
         </ul>
-        <?php if ($clientData['clientLevel'] > 1) {echo '<p><a href="/phpmotors/vehicles">Vehicle Management</a></p>';} ?> 
+        
+        <h2>Account Management</h2>
+        <p>Use this link to update account information.</p>
+        <p><a href="/phpmotors/accounts/?action=update-page">Account Management</a></p>
+
+        <?php if ($clientData['clientLevel'] > 1) {echo '<h2>Inventory Management</h2>
+                                                        <p>Use this link to manage the inventory.</p>
+                                                        <p><a href="/phpmotors/vehicles">Vehicle Management</a></p>';} ?> 
+
 
 <p>You are logged in.</p>  
 
@@ -43,3 +53,4 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === FALSE) {
     <script src="../js/main.js"></script>
 </body>
 </html>
+<?php unset($_SESSION['message']); ?>

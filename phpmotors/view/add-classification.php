@@ -41,6 +41,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === TRUE && $_SESSION[
         <?php require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/snippets/footer.php'; ?>
     </footer>
     </div>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
