@@ -7,9 +7,6 @@ $clientLastname = $_SESSION['clientData']['clientLastname'];
 $clientEmail = $_SESSION['clientData']['clientEmail'];
 $clientId = $_SESSION['clientData']['clientId'];
 
-
-echo $clientId;
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

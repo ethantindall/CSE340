@@ -30,7 +30,7 @@
                 <p>3 Cup holders</p>
                 <p>Superman doors</p>  
                 <p>Fuzzy dice!</p>
-                <img src="images/delorean.jpg" alt="Delorean">
+                <img src="images/vehicles/delorean.jpg" alt="Delorean">
                 <button type="button">Own Today</button>
             
             </div>

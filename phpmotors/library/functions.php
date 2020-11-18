@@ -18,7 +18,7 @@ function navBarPopulate($carclassifications) {
    $navList = '<ul>';
    $navList .= "<li><a href='/phpmotors/index.php' title='View the PHP Motors home page'>Home</a></li>";
    foreach ($carclassifications as $classification) {
-      $navList .= "<li><a href='/phpmotors/index.php?action=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
+      $navList .= "<li><a href='/phpmotors/vehicles/?action=classification&classificationName=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] lineup of vehicles'>$classification[classificationName]</a></li>";
    }
    $navList .= '</ul>';
    return $navList;
@@ -33,4 +33,19 @@ function buildClassificationList($classifications){
    } 
    $classificationList .= '</select>'; 
    return $classificationList; 
+  }
+
+
+  function buildVehiclesDisplay($vehicles){
+   $dv = '<ul id="inv-display">';
+   foreach ($vehicles as $vehicle) {
+    $dv .= '<li>';
+    $dv .= "<img src='$vehicle[invThumbnail]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'>";
+    $dv .= '<hr>';
+    $dv .= "<h2>$vehicle[invMake] $vehicle[invModel]</h2>";
+    $dv .= "<span>$vehicle[invPrice]</span>";
+    $dv .= '</li>';
+   }
+   $dv .= '</ul>';
+   return $dv;
   }

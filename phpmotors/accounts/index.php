@@ -33,6 +33,9 @@ switch ($action){
     case 'login-page':
         include '../view/login.php';
         break;
+    case 'admin':
+        include '../view/admin.php';
+        break;
     case 'update-page':
         include '../view/client-update.php';
         break;
@@ -84,8 +87,10 @@ switch ($action){
         $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
         $passwordCheck = checkPassword($clientPassword);
         
+        $existingEmail = checkExistingEmail($clientEmail);
+
         // Run basic checks, return if errors
-        if (empty($clientEmail) || empty($passwordCheck)) {
+        if (empty($clientEmail) || empty($passwordCheck) || !$existingEmail) {
             $_SESSION['message'] = '<p class="notice">Please provide a valid email address and password.</p>';
             include '../view/login.php';
             exit;
@@ -147,8 +152,14 @@ switch ($action){
         $updateOutcome = updateClient($clientFirstname, $clientLastname, $clientEmail, $clientId);
         if($updateOutcome === 1) {
             setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
+     
+            $_SESSION['clientData']['clientFirstname'] = $clientFirstname;
+            $_SESSION['clientData']['clientLastname'] = $clientLastname;
+            $_SESSION['clientData']['clientEmail'] = $clientEmail;
+            $_SESSION['clientData']['clientId'] = $clientId;
+    
             $_SESSION['message'] = "Thanks for updating $clientFirstname.";
-            header('Location: /phpmotors/accounts/?action=login-page');
+            header('Location: /phpmotors/accounts');
             exit;
         } else {
             $_SESSION['message'] = "<p>Sorry $clientFirstname, but the update failed. Please try again.</p>";
