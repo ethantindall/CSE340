@@ -22,11 +22,12 @@
     flex: 1 1 auto;
     border: 1px solid black;
     width: 70%;
+    text-align: center;
 
    }
    
    #inv-display li img {
-       max-width: 100%;
+       width: 100%;
    }
 }
 
@@ -51,6 +52,7 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
+    margin: 10px;
 }
   
 #inv-display div {

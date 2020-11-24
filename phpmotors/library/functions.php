@@ -40,12 +40,30 @@ function buildClassificationList($classifications){
    $dv = '<ul id="inv-display">';
    foreach ($vehicles as $vehicle) {
     $dv .= '<li>';
+    $dv .= "<a href='/phpmotors/vehicles/?action=pullVehicleData&vehicleId={$vehicle["invId"]}'>";
     $dv .= "<img src='$vehicle[invThumbnail]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'>";
-    $dv .= '<hr>';
-    $dv .= "<h2>$vehicle[invMake] $vehicle[invModel]</h2>";
-    $dv .= "<span>$vehicle[invPrice]</span>";
+    $dv .= "</a>";
+    //$dv .= '<hr>';
+    $dv .= "<a href='/phpmotors/vehicles/?action=pullVehicleData&vehicleId={$vehicle["invId"]}'><h2>$vehicle[invMake] $vehicle[invModel]</h2></a>";
+    $dv .= "<span>$$vehicle[invPrice]</span>";
     $dv .= '</li>';
+    //$dv .= '</a>';
    }
    $dv .= '</ul>';
    return $dv;
+  }
+
+  function vehicleDetailPage($vehicle) {
+     $money = number_format($vehicle['invPrice'], 2, ".", ",");
+     $dv = "<h1>$vehicle[invMake] $vehicle[invModel]</h1>";
+     $dv .= "<img src='$vehicle[invImage]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'>";
+     $dv .= "<p>Price: $$money</p>";
+     $dv .= '<hr>';
+     $dv .= "<h2>$vehicle[invMake] $vehicle[invModel] Details</h2>";
+     $dv .= "<p>$vehicle[invDescription]</p>";
+     $dv .= "<p><b>Color: </b>$vehicle[invColor]</p>";
+     $dv .= "<p><b>Quantity in Stock: </b>$vehicle[invStock]</p>";
+     //$dv .= "<p><b>Classification: </b>$vehicle[classificationId]</p>";
+     
+     return $dv;
   }

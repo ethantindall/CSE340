@@ -1,0 +1,65 @@
+header img {
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+body {
+    width: 100%;
+    margin: 0;
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header img {
+    width: 100%;
+    height: 200px;
+}
+h1 {
+    font-family: 'Great Vibes', cursive;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    font-size: 3rem;
+    color: #f5f5f5;
+    text-shadow: 3px 3px 3px gray;
+}
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    margin-left: 15px;
+}
+#payment {
+    border: 1px solid black;
+    padding-left: 15px;
+}
+header p {
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    color: #f5f5f5;
+    text-shadow: 3px 3px 3px gray;
+}
+
+#checkout {
+    width: 50%;
+    margin: 0 auto;
+}
+#check {
+    margin-bottom: 15px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+form input{
+    margin: 5px;
+}
+form button {
+    margin: 5px;
+    width: 50%;
+    height: 30px;
+}
+main, footer {
+    margin-left: 20px;
+}

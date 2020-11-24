@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Week 8 Page</title>
+</head>
+<body onload="focus()">
+    <header>
+        <img src="dark-wood.png" alt="banner">
+
+        <h1>The Bloated Bookstore</h1>
+        <p>Ye olde HQ for all things book!</p>
+    </header>
+    <main>
+
+        <section id="checkout">
+            <h2>Checkout Here!</h2>
+            <p id="message"></p>
+            <form method="POST" action="assign11.php">
+                <div id="check" onchange="products()">
+                    <label>Select your products:</label><br>
+                    <input type="checkbox" id="item_0" name="item_0" value="1 Book - $5">
+                    <label>1 Book - $5</label><br>
+                    <input type="checkbox" id="item_1" name="item_1" value="2 Books - $9">
+                    <label>2 Books - $9</label><br>
+                    <input type="checkbox" id="item_2" name="item_2" value="3 Books - $12">
+                    <label>3 Books - $12</label><br>
+                    <input type="checkbox" id="item_3" name="item_3" value="4 Books - $15">
+                    <label>4 Books - $15</label><br>
+                    <label>Total Cost:</label>
+                    <input disabled name="total" id="total">
+                </div>
+            
+
+                <label>First Name</label>
+                <input required type="text" id="first_name" name="first_name">
+                <label>Last Name</label>
+                <input required type="text" id="last_name" name="last_name">
+                <label>Shipping Address</label>
+                <input required type="text" id="address" name="address">
+                <label>Phone</label>
+                <input required type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                <label>Email</label>
+                <input required type="email" id="email" name="email">
+
+
+                <div id="payment">
+                    <h2>Payment Method</h2>
+                    <label>Credit Card Type:</label><br>
+                        <input type="radio" id="Visa" name="card" value="Visa" required>
+                        <label for="Visa">Visa</label><br>
+                        <input type="radio" id="Master" name="card" value="Master">
+                        <label for="Master">MasterCard</label><br>
+                        <input type="radio" id="Amex" name="card" value="Amex">
+                        <label for="Amex">American Express</label><br>
+                    <label>Card Number</label>
+                    <input required type="text" id="credit_card" name="credit_card" pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}"><br>
+                    <label>Expiration Date</label>
+                    <input required type="text" id="exp_date" name="exp_date">
+                </div>
+                
+                <button type="reset" name="reset">Reset</button>
+                <button type="submit" name="validate">Submit</button>
+            </form>
+
+
+        </section>
+  </main>
+    <footer>
+        <p>&copy; Ethan Tindall 2020</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

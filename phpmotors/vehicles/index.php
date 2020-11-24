@@ -182,6 +182,18 @@ $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
         }
         include '../view/classification.php';
         break;
+    case 'pullVehicleData':
+        $vehicleId = filter_input(INPUT_GET, 'vehicleId', FILTER_SANITIZE_NUMBER_INT);
+        $invInfo = getInvItemInfo($vehicleId);
+        $_SESSION['message'] = null;
+        if (!$invInfo) {
+                $_SESSION['message'] = 'Sorry, no vehicle information could be found.';
+            }
+        else {
+            $vehicle = vehicleDetailPage($invInfo);
+        }
+        include '../view/vehicle-detail.php';
+        break;
     default:
         $classificationList = buildClassificationList($classifications);
         include '../view/vehicle-man.php';

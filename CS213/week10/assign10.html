@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+    
+<body onload="loaded()">
+    <title>Week 10 Page</title>
+    <div id="demo">
+        <ul id="listy">
+        </ul>
+    </div>
+
+
+
+<script>
+function loaded() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      let demo = document.getElementById("listy");
+      demo.innerHTML = "";
+      let obj = JSON.parse(this.responseText);
+      
+      for (let i = 0; i < obj.length; i ++) {
+        let line = document.createElement('li');
+        let display = document.createTextNode("FILE NAME: " + obj[i].fileName + ". CWD: " + obj[i].cwd + ". FILE TYPE: " + obj[i].fileType);
+        let butt = document.createElement("a");
+        butt.setAttribute("href", obj[i].fileName)
+        butt.innerHTML="See File: ";
+        line.appendChild(butt);
+        line.appendChild(display);
+        demo.appendChild(line);
+      }
+      
+
+  };
+  xhttp.open("GET", "assign10.php", true);
+  xhttp.send();
+}
+</script>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+    }
+    ul li {
+        padding: 10px;
+    }
+</style>
+</body>
+</html>
