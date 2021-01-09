@@ -1,0 +1,47 @@
+.hide {
+    display: none;
+}
+h1, h2, h3 {
+    font-family: 'Permanent Marker', cursive;
+}
+h1 {
+    font-size: 2.5rem;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#studentList {
+    border: 10px inset #654321;
+    width: 50%;
+    margin-top: 40px;
+}
+table, td, th {
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#studentList {
+    background-image: url("wood.jpg");
+}
+form  {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+form button {
+    width: 50%;
+    margin: 5px;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+form p {
+    margin: 0;
+    padding: 0;
+}
